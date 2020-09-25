@@ -1,0 +1,46 @@
+body {
+  height: 60vh;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+p,
+input,
+button {
+  border: 10px solid black;
+  padding: 10px;
+  font-size: 2em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+.result {
+  background-color: black;
+  color: white;
+}
+
+p,
+input {
+  text-align: right;
+}
+
+input {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}

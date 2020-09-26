@@ -35,7 +35,7 @@ const saveNumber = (event) => {
   inputElm.value = input;
 };
 
-// SAVEDOT: saves , as .
+// SAVEDOT: replaces comma with a dot
 const saveDot = (arg) => {
   if (arg.includes(",")) {
     let str = "";
@@ -108,11 +108,13 @@ const equals = () => {
   } else {
     result = input;
   }
+  //round if has more than two decimal places
   result = Math.round(result * 100) / 100;
   resultElm.textContent = result;
   equalsClicked = true;
+  op = "none";
 };
 
-// =: executes last operation user pressed
+// clicking equals btn initiates equals function
 const btnEqual = document.querySelector("#btn-equal");
 btnEqual.addEventListener("click", equals);
